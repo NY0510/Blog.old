@@ -4,7 +4,7 @@
 
 # Basic
 name: "NY0510의 무한삽질 블로그"
-description: "많은 것을 시도하고 끊임없이 노력하는 학생 NY0510입니다!"
+description: "많은 것을 시도하고 끊임없이 노력하는 학생, 김가온 입니다!"
 
 author:
     youtubeChannel: UCbPHBnYHcUYcWfpIEtn60WA
@@ -43,7 +43,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: Asia/Seoul
-permalink: /:year-:month-:day/:title/
+permalink: /posts/:title/
+# permalink: /:year-:month-:day/:title/
 
 # Pagination
 paginate: 6
