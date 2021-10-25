@@ -23,7 +23,7 @@ Fail2ban의 설치와 사용법을 알아봅시다.
 journalctl -f
 ```
 
-![journalctl -f 실행 결과]({{ site.url }}/assets/images/2021-10-24-setting-up-fail2ban-on-raspberry-pi/journalctl -f.png){: width="80%" }
+![journalctl -f 실행 결과]({{ site.url }}/assets/images/2021-10-24-setting-up-fail2ban-on-raspberry-pi/journalctl -f.png){: width="100%" }
 
 저는 이미 **Fail2ban**과 **OTP** 설정이 완료되어 있어 로그인 시도는 보이지 않지만, 이러한 보안 설정이 되어있지 않을 경우에는
 
