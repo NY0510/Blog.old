@@ -29,7 +29,7 @@ journalctl -f
 
 `Failed password for XXX from X.X.X.X port XXX` 이러한 식으로 **무차별 대입 공격 시도**가 수없이 들어오는 것을 확인할 수 있습니다.
 
-~~글로벌한 내 서버!~~
+**~~글로벌한 내 서버!~~**
 
 Fail2ban이 이러한 SSH 로그인 시도를 필터를 통해 걸러주고, 자동으로 차단 해주는 역할을 합니다.
 
