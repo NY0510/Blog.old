@@ -4,9 +4,7 @@ title: "[라즈베리파이] Swap 설정하기"
 comments: true
 tags:
   - Raspberry PI
-  - 라즈베리파이
   - Swap
-  - 스왑
 ---
 
 이번 포스트에서는 라즈베리파이에 Swap 설정을 해보겠습니다.
@@ -120,5 +118,4 @@ sudo nano /etc/fstab
 ```bash
 sudo rm /swapfile
 ```
-
 

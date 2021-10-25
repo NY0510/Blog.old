@@ -5,10 +5,7 @@ description: "설치와 기본 설정까지"
 comments: true
 tags:
     - Raspberry PI
-    - 라즈베리파이
     - Plex Media Server
-    - 플렉스 미디어 서버
-    - 미디어 서버
 ---
 
 이번 포스트에서는 라즈베리파이에 미디어 서버를 구축해
