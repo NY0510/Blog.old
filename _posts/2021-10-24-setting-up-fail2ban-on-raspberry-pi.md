@@ -23,7 +23,7 @@ Fail2ban의 설치와 사용법을 알아봅시다.
 journalctl -f
 ```
 
-![journalctl -f 실행 결과]({{ site.url }}/assets/images/2021-10-24-setting-up-fail2ban-on-raspberry-pi/journalctl -f.png){: width="45%" }
+![journalctl -f 실행 결과]({{ site.url }}/assets/images/2021-10-24-setting-up-fail2ban-on-raspberry-pi/journalctl -f.png){: width="80%" }
 
 저는 이미 **Fail2ban**과 **OTP** 설정이 완료되어 있어 로그인 시도는 보이지 않지만, 이러한 보안 설정이 되어있지 않을 경우에는
 
@@ -32,6 +32,8 @@ journalctl -f
 ~~글로벌한 내 서버!~~
 
 Fail2ban이 이러한 SSH 로그인 시도를 필터를 통해 걸러주고, 자동으로 차단 해주는 역할을 합니다.
+
+<br>
 
 ## 설치
 
@@ -42,6 +44,8 @@ sudo apt-get install fail2ban
 ```
 
 설치가 완료되면 자동으로 서비스를 시작하지만 `sudo service fail2ban status` 명령어를 통해 실행 중인지 확인할 수 있습니다.
+
+<br>
 
 ## 설정
 
@@ -84,6 +88,8 @@ logpath = /var/log/fail2ban-ssh.log
 ```
 
 라즈베리파이를 재부팅 하거나, `sudo service fail2ban restart` 명령어를 통해 변경 사항을 적용해 줍니다.
+
+<br>
 
 ## 사용법
 
