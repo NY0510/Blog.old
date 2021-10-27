@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "[라즈베리파이] Swap 설정하기"
+description: "메모리가 부족하다면 디스크를 메모리처럼 사용하자"
 comments: true
 tags:
   - Raspberry PI
