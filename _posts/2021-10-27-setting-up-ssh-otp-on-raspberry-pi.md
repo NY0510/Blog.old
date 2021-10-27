@@ -141,6 +141,8 @@ sudo nano /etc/pam.d/sshd
 auth required pam_google_authenticator.so
 ```
 
+<br>
+
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
