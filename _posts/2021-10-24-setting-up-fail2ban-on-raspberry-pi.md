@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "[라즈베리파이] Fail2ban으로 SSH 보안 강화하기"
+title: "[라즈베리파이] Fail2ban으로 SSH 보안 강화하기 (1)"
 comments: true
 tags:
   - Raspberry PI
