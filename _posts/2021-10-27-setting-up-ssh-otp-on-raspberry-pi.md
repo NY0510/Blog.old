@@ -3,9 +3,9 @@ layout: post
 title: "[라즈베리파이] 2FA인증으로 SSH 보안 강화하기 (2)"
 comments: true
 tags:
-    - Raspberry PI
-    - OTP
-    - SSH
+  - Raspberry PI
+  - OTP
+  - SSH
 ---
 
 지난 포스트 에서는 Fail2ban을 사용해 라즈베리파이의 SSH 보안을 강화해 봤습니다.
@@ -26,9 +26,9 @@ sudo apt-get install libpam-google-authenticator
 
 ## OTP 설정
 
-> **_진행 하기 전에 만약 루트 게정으로 로그인되어 있다면 SSH를 사용할 일반 사용자 계정으로 로그인 해야 합니다._**
+> ***진행 하기 전에 만약 루트 게정으로 로그인되어 있다면 SSH를 사용할 사용자 계정으로 로그인 해야 합니다.***
 
-아래 명령어로 설치 도우미를 실행해 줍니다.
+아래 명령어로 설치 프로그램을 실행해 줍니다.
 
 ```bash
 google-authenticator
@@ -44,7 +44,9 @@ Do you want authentication tokens to be time-based (y/n)
 
 이 정보는 다시 확인할 수 없으니, 안전한 곳에 기록해 줍시다.
 
-![OTP 설정 화면]({{ site.url }}/assets/images/2021-10-27-setting-up-ssh-otp-on-raspberry-pi/otp-setting.png){: width="80%" }
+![OTP 설정 화면]({{ site.url }}/2021-10-27-setting-up-ssh-otp-on-raspberry-pi\otp-setting.png){: width="95%" }
+
+<br>
 
 ### OTP 등록하기
 
@@ -52,17 +54,23 @@ OTP 코드를 생성하기 위해서는 코드를 생성해주는 앱이 필요�
 
 **[Apple App Store](https://apps.apple.com/us/app/google-authenticator/id388497605)**나 **[Google Play Store](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2)**에서 Google Authenticator 앱을 설치합니다.
 
-![Google Authenticator 설치화면]({{ site.url }}/assets/images/2021-10-27-setting-up-ssh-otp-on-raspberry-pi/app-store.png)
+![Google Authenticator 설치화면]({{ site.url }}/2021-10-27-setting-up-ssh-otp-on-raspberry-pi/app-store.png)
+
+<br>
 
 앱을 실행하면 아래와 같은 화면이 나올텐데, **Scan QR code**를 눌러 아까 콘솔에 출력된 QR코드를 스캔합니다.
 
-![Google Authenticator 실행 후 화면]({{ site.url }}/assets/images/2021-10-27-setting-up-ssh-otp-on-raspberry-pi/otp-inapp-screen.png)
+![Google Authenticator 실행 후 화면]({{ site.url }}/2021-10-27-setting-up-ssh-otp-on-raspberry-pi/otp-inapp-screen.png)
+
+<br>
 
 그러면 아래와 같이 OTP가 등록된 것을 확인할 수 있습니다
 
-![Google Authenticator OTP 등록 후 화면]({{ site.url }}/assets/images/2021-10-27-setting-up-ssh-otp-on-raspberry-pi/otp-after-qr-scan-screen.png)
+![Google Authenticator OTP 등록 후 화면]({{ site.url }}/2021-10-27-setting-up-ssh-otp-on-raspberry-pi/otp-after-qr-scan-screen.png)
 
-### OTP 서버측 설정
+<br>
+
+### 서버측 설정
 
 이제 서버측에서 해야 할 설정을 해봅시다.
 
@@ -77,7 +85,8 @@ Do you want me to update your "/.google_authenticator" file? (y/n)
 <br>
 
 ```
-Do you want to disallow multiple uses of the same authentication token? This restricts you to one login about every 30s, but it increases your chances to notice or even prevent man-in-the-middle attacks (y/n)
+Do you want to disallow multiple uses of the same authentication token? This restricts you to one login about every 30s,
+but it increases your chances to notice or even prevent man-in-the-middle attacks (y/n)
 ```
 
 여러 사용자가 하나의 코드를 가지고 인증하는 것을 비활성화 할것인지 선택하는 설정입니다.
@@ -87,7 +96,12 @@ Do you want to disallow multiple uses of the same authentication token? This res
 <br>
 
 ```
-By default, a new token is generated every 30 seconds by the mobile app. In order to compensate for possible time-skew between the client and the server, we allow an extra token before and after the current time. This allows for a time skew of up to 30 seconds between authentication server and client. If you experience problems with poor time synchronization, you can increase the window from its default size of 3 permitted codes (one previous code, the current code, the next code) to 17 permitted codes (the 8 previous codes, the current code, and the 8 next codes). This will permit for a time skew of up to 4 minutes between client and server. Do you want to do so? (y/n)
+By default, a new token is generated every 30 seconds by the mobile app. In order to compensate for possible time-skew
+between the client and the server, we allow an extra token before and after the current time. 
+This allows for a time skew of up to 30 seconds between authentication server and client.
+If you experience problems with poor time synchronization, you can increase the window from its default size of 3 permitted
+codes (one previous code, the current code, the next code) to 17 permitted codes (the 8 previous codes, the current code, and the 8 next codes). 
+This will permit for a time skew of up to 4 minutes between client and server. Do you want to do so? (y/n)
 ```
 
 OTP 토큰은 30초마다 초기화 되지만 서버의 시간 동기화 문제로 토큰 주기가 안 맞는 상황이 발생할 수 있으니,
@@ -99,7 +113,9 @@ OTP 토큰은 30초마다 초기화 되지만 서버의 시간 동기화 문제�
 <br>
 
 ```
-If the computer that you are logging into isn't hardened against brute-force login attempts, you can enable rate-limiting for the authentication module. By default, this limits attackers to no more than 3 login attempts every 30s. Do you want to enable rate-limiting? (y/n)
+If the computer that you are logging into isn't hardened against brute-force login attempts, you can enable rate-limiting
+for the authentication module. By default, this limits attackers to no more than 3 login attempts every 30s.
+Do you wantto enable rate-limiting? (y/n)
 ```
 
 사용자가 코드를 3번 이상 틀리면 차단하는 기능입니다.
@@ -116,25 +132,21 @@ If the computer that you are logging into isn't hardened against brute-force log
 sudo nano /etc/pam.d/sshd
 ```
 
-설정 파일을 열고, 아래로 내리다 보면 `@include common-password` 이 보일겁니다.
+설정 파일을 열고, 아래로 내리다 보면 `@include common-password`가 보일겁니다.
 
-<br>
-
-바로 아래 아래 항목을 추가해 줍니다.
+바로 밑에 아래 항목을 추가해 줍니다.
 
 ```bash
 auth required pam_google_authenticator.so
 ```
 
-<br>
+
 
 ```bash
 sudo nano /etc/ssh/sshd_config
 ```
 
-SSH 설정파일을 열어줍니다.
-
-아래 항목을 찾아 `yes`로 바꿔줍니다
+그런 다음 SSH 설정파일을 열고, 아래 항목을 찾아 `yes`로 바꿔줍니다.
 
 ```
 ChallengeResponseAuthentication no
@@ -146,7 +158,7 @@ ChallengeResponseAuthentication no
 sudo service sshd restart
 ```
 
-이제 `sshd`를 재시작 합니다
+이제 `sshd`를 재시작 합니다.
 
 <br>
 
