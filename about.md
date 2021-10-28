@@ -3,7 +3,9 @@ title: About
 permalink: /about/
 ---
 
-<h2 align="center">Hello, World!</h2>
+**임시 About 페이지**
+
+<!-- <h2 align="center">Hello, World!</h2>
 <img align="right" width="400" alt="GIF" src="https://raw.githubusercontent.com/NY0510/NY0510/main/Programming.gif">
 
 - 🔭 I’m currently working on **Python, Node.js, Java, and other Web Developments**
@@ -22,7 +24,7 @@ permalink: /about/
 - [Instagram](https://www.instagram.com/nyny0510_)
 - [Email](mailto:namnyang0510@gmail.com)
 
-<br/>
+<br/> -->
 
 <!-- ## Languages And Toolsd
 
@@ -33,5 +35,3 @@ permalink: /about/
 **Credits**: [NY0510](https://github.com/NY0510/)
 
 **Last Edited**: 20/07/2021
-
-
