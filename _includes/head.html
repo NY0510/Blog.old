@@ -24,6 +24,7 @@
 	<meta name="twitter:card" content="{{ site.url }}/assets/images/og/image.png" />
 	{% endif %}
 
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 	<meta name="theme-color" content="#17dc00" />
 	<!-- <meta name="theme-color" content="#2DFF14" /> -->
