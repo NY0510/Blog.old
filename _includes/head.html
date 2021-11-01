@@ -38,15 +38,4 @@
 	<link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
 
 	{% include google-analytics.html %} {% include tracking.html %}
-
-	<!-- 인디케이터 시작-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script type="text/javascript" src="https://rawcdn.githack.com/mburakerman/prognroll/0feda211643153bce2c69de32ea1b39cdc64ffbe/src/prognroll.js"></script>
-	<script type="text/javascript">
-		$(function () {
-			$("body").prognroll({ height: 5, color: "#555" });
-			$(".content").prognroll({ custom: true });
-		});
-	</script>
-	<!-- 인디케이터 종료 -->
 </head>
