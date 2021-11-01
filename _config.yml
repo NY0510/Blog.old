@@ -92,4 +92,6 @@ gems:
 
 exclude: [vendor]
 
-plugins: [jekyll-paginate]
+plugins:
+    - jekyll-paginate
+    - jekyll-sitemap
