@@ -5,33 +5,35 @@
 	<link rel="shortcut icon" href="{{ site.url }}/favicon.ico" type="image/x-icon" />
 	<link rel="icon" href="{{ site.url }}/favicon.ico" type="image/x-icon" />
 	<title>{% if page.title %}{{ page.title }} - {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
-	<!-- <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title> -->
 
 	<!-- Meta -->
 	<meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}" />
+	<meta http-equiv="Title" content="{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="{{ site.url }}" />
 	<meta property="og:author" content="NY0510" />
-	<meta property="og:image" content="{{ site.url }}/assets/images/og/image.png" />
-	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-
-	<meta http-equiv="Title" content="{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}" />
-	<meta http-equiv="Publisher" content="NY0510" />
 	<meta http-equiv="Author" content="NY0510" />
+	<meta http-equiv="Publisher" content="NY0510" />
 
-	<!-- <meta name="theme-color" content="#2DFF14" /> -->
+	<!-- 포스트 머리말에 image 있으면 미리보기 이미지로 설정하고 없으면 기본 이미지로 -->
+	{% if page.image %}
+	<meta property="og:image" content="{{ site.url }}/assets/images/{{page.name}}/{{ page.image }}" />
+	<meta name="twitter:card" content="{{ site.url }}/assets/images/{{page.name}}/{{ page.image }}" />
+	{% else %}
+	<meta property="og:image" content="{{ site.url }}/assets/images/og/image.png" />
 	<meta name="twitter:card" content="{{ site.url }}/assets/images/og/image.png" />
+	{% endif %}
+
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+	<meta name="theme-color" content="#17dc00" />
+	<!-- <meta name="theme-color" content="#2DFF14" /> -->
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css" type="text/css" />
 
-	<!-- JS -->
-	<!-- <script type="text/javascript" src="{{ site.baseurl }}/assets/js/tracking.js"></script> -->
-
 	<!-- Font -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" />
-	<!-- <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css" /> -->
 	<link href="https://cdn.jsdelivr.net/gh/joungkyun/font-d2coding/d2coding.css" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" />
 
