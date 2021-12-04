@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[라즈베리파이] Plex Media Server 설치하기"
+title: "[RPI] Plex Media Server 설치하기"
 description: "설치와 기본 설정까지"
 comments: true
 tags:
@@ -191,4 +191,3 @@ drwxr-xr-x  3 root root 131072 May 29 11:38 'TV Shows'
 > 또 다른 강점은 클라이언트 프로그램이 다양한 플랫폼에서 지원된다는 점입니다. 데스크톱은 물론이고 안드로이드를 사용한 TV나 핸드폰 등에서도 인터넷만 가능하다면 영상을 어디서나 시청 할 수 있습니다.
 
 **플렉스**에 대한 더 자세한 사용법은 **[여기](https://www.plex.tv/)**를 참고하시길 바랍니다.
-

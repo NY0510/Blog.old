@@ -1,13 +1,12 @@
 ---
-
 layout: post
-title: "[라즈베리파이] Fail2ban으로 SSH 보안 강화하기 (1)"
+title: "[RPI] Fail2ban으로 SSH 보안 강화하기 (1)"
 description: "자동 IP 차단으로 SSH 보안을 강화하자"
 comments: true
 tags:
-  - Raspberry PI
-  - Fail2ban
-  - SSH
+    - Raspberry PI
+    - Fail2ban
+    - SSH
 ---
 
 만약 라즈베리파이를 서버로 쓰고, 외부와 연결되어 있다면 혹시나 모를 **Brute-force** 혹은 **무차별 대입 공격**으로 인한 피해 사고를 예방하기 위해
@@ -74,8 +73,8 @@ bantime = 1w
 backend = systemd
 
 # 이메일 알림 설정
-destemail = 
-sendername = 
+destemail =
+sendername =
 mta = sendmail
 
 # IP 화이트리스트 (이 IP 대역은 절대 차단당하지 않음)

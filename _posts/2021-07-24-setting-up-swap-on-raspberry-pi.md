@@ -1,16 +1,17 @@
 ---
 layout: post
-title: "[라즈베리파이] Swap 설정하기"
+title: "[RPI] Swap 설정하기"
 description: "메모리가 부족하다면 디스크를 메모리처럼 사용하자"
 comments: true
 tags:
-  - Raspberry PI
-  - Swap
+    - Raspberry PI
+    - Swap
 ---
 
 이번 포스트에서는 라즈베리파이에 Swap 설정을 해보겠습니다.
 
 ## Swap?
+
 메모리가 부족한 경우 메모리의 일부 내용을 디스크로 Swap 하는 것을 말합니다.
 
 **Windows**의 가상 메모리와 같이 디스크 일부를 메모리처럼 사용하게 됩니다.
@@ -22,6 +23,7 @@ tags:
 스왑 파일을 생성하기 전에 이미 스왑 파일이나 파티션이 있는지 먼저 확인합니다.
 
 아래 두 명령어를 입력했을때 **Swap관련 내용**이 보이지 않으면 스왑이 설정되지 않은 것 입니다
+
 ```bash
 sudo free -m
 sudo swapon -s
@@ -30,6 +32,7 @@ sudo swapon -s
 <br>
 
 ## 스왑 파일 생성
+
 스왑 파일 및 파티션이 존재하지 않는 것을 확인한 뒤 아래 명령어로 스왑 용도로 사용할 파일을 생성합니다
 
 아래 명령어는 루트 디렉터리에 **4GB**의 파일을 생성한다는 뜻입니다.
@@ -56,9 +59,11 @@ dr-xr-xr-x  12 root root          0 Jan  1  1970 sys
 <br>
 
 ## 스왑 활성화
+
 이제 생성한 파일을 스왑으로 동작하도록 설정해 줘야 합니다.
 
 생성된 파일의 권한을 수정합니다.
+
 ```bash
 sudo chmod 600 /swapfile
 ```
@@ -66,6 +71,7 @@ sudo chmod 600 /swapfile
 <br>
 
 해당 파일이 스왑으로 동작하도록 설정합니다.
+
 ```bash
 sudo mkswap /swapfile
 ```
@@ -73,6 +79,7 @@ sudo mkswap /swapfile
 <br>
 
 마지막으로 아래 명령어를 입력해서 스왑을 활성화해줍니다.
+
 ```bash
 sudo swapon /swapfile
 ```
@@ -80,6 +87,7 @@ sudo swapon /swapfile
 <br>
 
 라즈베리파이를 재부팅 해도 계속 사용하기 위해서 `/etc/fstab`를 수정해 줍시다.
+
 ```bash
 sudo nano /etc/fstab
 ```
@@ -87,6 +95,7 @@ sudo nano /etc/fstab
 <br>
 
 그리고 제일 하단에 아래와 같이 한 줄을 추가합니다.
+
 ```bash
 /swapfile swap swap defaults 0 0
 ```
@@ -94,7 +103,9 @@ sudo nano /etc/fstab
 <br>
 
 ## 스왑 파일 삭제
+
 스왑 파일은 삭제하려면, 아래 명령어로 먼저 스왑을 비활성화합니다.
+
 ```bash
 sudo swapoff -v /swapfile
 ```
@@ -102,6 +113,7 @@ sudo swapoff -v /swapfile
 <br>
 
 스왑 파일을 생성할때 `/etc/fstab`에 추가한 내용을 삭제합니다.
+
 ```bash
 sudo nano /etc/fstab
 ```
@@ -109,6 +121,7 @@ sudo nano /etc/fstab
 <br>
 
 아래의 라인을 삭제해줍니다.
+
 ```bash
 /swapfile swap swap defaults 0 0
 ```
@@ -116,7 +129,7 @@ sudo nano /etc/fstab
 <br>
 
 마지막으로 생성했던 `swapfile`을 삭제해주면 됩니다.
+
 ```bash
 sudo rm /swapfile
 ```
-

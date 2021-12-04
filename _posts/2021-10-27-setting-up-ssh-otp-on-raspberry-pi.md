@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[라즈베리파이] 2FA인증으로 SSH 보안 강화하기 (2)"
+title: "[RPI] 2FA인증으로 SSH 보안 강화하기 (2)"
 description: "OTP 인증으로 SSH 보안을 강화하자"
 comments: true
 tags:
