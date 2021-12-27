@@ -90,3 +90,5 @@ exclude: [vendor]
 
 plugins:
     - jekyll-paginate
+    - jekyll-youtube
+    - jemoji
