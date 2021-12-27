@@ -7,25 +7,29 @@
 	<title>{% if page.title %}{{ page.title }} - {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
 
 	<!-- Meta -->
-	<meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}" />
 	<meta http-equiv="Title" content="{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="{{ site.url }}" />
-	<meta property="og:author" content="NY0510" />
+	<meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}" />
+	<meta property="og:locale" content="ko_KR" />
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+	<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta property="og:site_name" content="{{ site.name }}" />
+	<meta name="twitter:card" content="summary" />
+	<meta property="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}" />
+	<meta property="og:type" content="blog" />
 	<meta http-equiv="Author" content="NY0510" />
+	<meta property="og:author" content="NY0510" />
 	<meta http-equiv="Publisher" content="NY0510" />
 
-	<!-- 포스트 머리말에 image 있으면 미리보기 이미지로 설정하고 없으면 기본 이미지로 -->
+	<!-- 포스트 설정에 image 있으면 미리보기 이미지로 설정하고 없으면 기본 이미지로 -->
 	{% if page.image %}
 	<meta property="og:image" content="{{ site.url }}/assets/images/{{page.name}}/{{ page.image }}" />
 	<meta name="twitter:card" content="{{ site.url }}/assets/images/{{page.name}}/{{ page.image }}" />
 	{% else %}
-	<meta property="og:image" content="{{ site.url }}/assets/images/og/image.png" />
-	<meta name="twitter:card" content="{{ site.url }}/assets/images/og/image.png" />
+	<meta property="og:image" content="{{ site.url }}/assets/images/og/background.png" />
+	<meta name="twitter:card" content="{{ site.url }}/assets/images/og/background.png" />
 	{% endif %}
-
-	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 	<!-- <meta name="theme-color" content="#2DFF14" /> -->
 
 	<!-- CSS -->
