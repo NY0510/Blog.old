@@ -9,11 +9,7 @@ jobs:
     build_and_deploy:
         runs-on: ubuntu-latest
         steps:
-            - run: |
-                  curl \
-                      -H "Content-Type: application/json" \
-                      -d '{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Started!\", \"color\": 3092790 }]}' \
-                      "${{ secrets.DISCORD_WEBHOOK }}"
+            - run: 'curl -H "Content-Type: application/json" -d "{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Started!\", \"color\": 3092790 }]}" "${{ secrets.DISCORD_WEBHOOK }}"'
 
             - uses: actions/checkout@v2
 
@@ -40,11 +36,7 @@ jobs:
                   actor: "" # Default is the GITHUB_ACTOR
                   pre_build_commands: "" # Installing additional dependencies (Arch Linux)
 
-            - run: |
-                  curl \
-                      -H "Content-Type: application/json" \
-                      -d '{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Done!\", \"color\": 3092790 }]}' \
-                      "${{ secrets.DISCORD_WEBHOOK }}"
+            - run: 'curl -H "Content-Type: application/json" -d "{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Done!\", \"color\": 3092790 }]}" "${{ secrets.DISCORD_WEBHOOK }}"'
 
             - run: curl -X POST "${{ secrets.BUILD_WEBHOOK }}" # CloudFlare Page Build
 
