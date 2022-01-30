@@ -6,7 +6,6 @@ comments: true
 tags:
 	- Ubuntu
 	- Discord
-	- Fix Error
 ---
 
 우분투에서 디스코드 화면공유를 하려고 하면 검은 화면만 나오는 문제가 있다.
