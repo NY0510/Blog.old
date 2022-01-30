@@ -1,11 +1,11 @@
 ---
-
 layout: post
 title: "[RPI] 라즈베리파이로 FM 라디오 방송국 만들기"
 description: "라즈베리파이를 FM 송신기로!"
 comments: true
-tags: - Raspberry PI - FM Radio
-
+tags:
+    - Raspberry PI
+    - FM Radio
 ---
 
 <!-- ---
