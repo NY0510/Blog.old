@@ -10,10 +10,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: |
-                  export WEBHOOK_DATA='{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Started!\", \"color\": 3092790 }]}'
                   curl \
                       -H "Content-Type: application/json" \
-                      -d $WEBHOOK_DATA "${{ secrets.DISCORD_WEBHOOK }}"
+                      -d '{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Started!\", \"color\": 3092790 }]}' \
+                      "${{ secrets.DISCORD_WEBHOOK }}"
 
             - uses: actions/checkout@v2
 
@@ -41,10 +41,10 @@ jobs:
                   pre_build_commands: "" # Installing additional dependencies (Arch Linux)
 
             - run: |
-                  export WEBHOOK_DATA='{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Done!\", \"color\": 3092790 }]}'
                   curl \
                       -H "Content-Type: application/json" \
-                      -d $WEBHOOK_DATA "${{ secrets.DISCORD_WEBHOOK }}"
+                      -d '{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Done!\", \"color\": 3092790 }]}' \
+                      "${{ secrets.DISCORD_WEBHOOK }}"
 
             - run: curl -X POST "${{ secrets.BUILD_WEBHOOK }}" # CloudFlare Page Build
 
