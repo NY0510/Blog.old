@@ -3,6 +3,6 @@ _site
 Gemfile.lock
 _drafts
 .jsbeautifyrc
-.jekyll-cache
+.jekyll-cache/
 *.cmd
 플러그인.md
