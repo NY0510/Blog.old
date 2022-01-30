@@ -22,6 +22,7 @@ layout: default
 				</a>
 			</li>
 
+			{% unless forloop.last %}{% endunless %} {% endfor %}
 			<a href="https://hits.seeyoufarm.com">
 				<style>
 					.hits {
@@ -36,7 +37,6 @@ layout: default
 					src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fblog.namnyang.live&count_bg=%23434343&title_bg=%237C7C7C&icon=checkmarx.svg&icon_color=%23FFFFFF&title=%EB%B0%A9%EB%AC%B8%EC%88%98&edge_flat=false"
 				/>
 			</a>
-			{% unless forloop.last %}{% endunless %} {% endfor %}
 		</ul>
 	</div>
 
