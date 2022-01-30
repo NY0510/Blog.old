@@ -33,3 +33,5 @@ jobs:
                   cname: "" # Default is to not use a cname
                   actor: "" # Default is the GITHUB_ACTOR
                   pre_build_commands: "" # Installing additional dependencies (Arch Linux)
+
+                  run: curl -X POST "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/6889cfa0-b89e-4f88-ad9e-1a2ea018a8dc" # CloudFlare Page Build
