@@ -34,4 +34,4 @@ jobs:
                   actor: "" # Default is the GITHUB_ACTOR
                   pre_build_commands: "" # Installing additional dependencies (Arch Linux)
 
-        run: curl -X POST "${{ secrets.BUILD_WEBHOOK }}" # CloudFlare Page Build
+            - run: curl -X POST "${{ secrets.BUILD_WEBHOOK }}" # CloudFlare Page Build
