@@ -1,15 +1,5 @@
 ---
 layout: post
-title: "[RPI] 라즈베리dddddddddddddddd파이로 FM 라디오 방송국 만들기"
-description: "라즈베리파이를 FM 송신기로!"
-comments: true
-tags:
-    - Raspberry PI
-    - FM Radio
----
-
-<!-- ---
-layout: post
 title: "[Ubuntu] 우분투에서 디스코드 화면공유 문제 해결하기"
 description: "디스코드에서 전체화면 공유시 검은화면이 나오는 문제 해결"
 comments: true
@@ -17,7 +7,7 @@ tags:
 	- Ubuntu
 	- Discord
 	- Fix Error
---- -->
+---
 
 우분투에서 디스코드 화면공유를 하려고 하면 검은 화면만 나오는 문제가 있다.
 
