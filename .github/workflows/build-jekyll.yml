@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: |
-                  export WEBHOOK_DATA="{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Started!\", \"color\": 3092790 },]}"
+                  export WEBHOOK_DATA='{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Started!\", \"color\": 3092790 }]}'
                   curl \
                       -H "Content-Type: application/json" \
                       -d $WEBHOOK_DATA "${{ secrets.DISCORD_WEBHOOK }}"
@@ -41,7 +41,7 @@ jobs:
                   pre_build_commands: "" # Installing additional dependencies (Arch Linux)
 
             - run: |
-                  export WEBHOOK_DATA="{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Done!\", \"color\": 3092790 },]}"
+                  export WEBHOOK_DATA='{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Done!\", \"color\": 3092790 }]}'
                   curl \
                       -H "Content-Type: application/json" \
                       -d $WEBHOOK_DATA "${{ secrets.DISCORD_WEBHOOK }}"
