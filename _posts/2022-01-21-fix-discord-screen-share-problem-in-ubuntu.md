@@ -4,9 +4,8 @@ title: "[Ubuntu] 우분투에서 디스코드 화면공유 문제 해결하기"
 description: "디스코드에서 전체화면 공유시 검은화면이 나오는 문제 해결"
 comments: true
 tags:
-	- Ubuntu
-	- Discord
-	- Fix Error
+    - Ubuntu
+    - Discord
 ---
 
 우분투에서 디스코드 화면공유를 하려고 하면 검은 화면만 나오는 문제가 있다.
