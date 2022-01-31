@@ -43,7 +43,7 @@ permalink: /posts/:title/
 # permalink: /:year-:month-:day/:title/
 
 # Pagination
-paginate: 6
+paginate: 10
 paginate_path: /page:num/
 
 # Markdown
