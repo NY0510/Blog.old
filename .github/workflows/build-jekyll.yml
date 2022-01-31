@@ -36,7 +36,7 @@ jobs:
                   actor: "" # Default is the GITHUB_ACTOR
                   pre_build_commands: "" # Installing additional dependencies (Arch Linux)
 
-            - run: 'curl -H "Content-Type: application/json" -d "{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Done!\", \"color\": 3092790 ,\"url\":\"https://github.com/NY0510/Blog/actions/runs/$GITHUB_ACTION\"}]}" "${{ secrets.DISCORD_WEBHOOK }}"'
+            - run: 'curl -H "Content-Type: application/json" -d "{\"username\": \"Blog Auto Build\",\"embeds\": [{ \"title\": \"Jekyll Build Done!\", \"color\": 3092790 ,\"url\":\"https://github.com/NY0510/Blog/actions/runs/$GITHUB_RUN_ID\"}]}" "${{ secrets.DISCORD_WEBHOOK }}"'
 
             - run: curl -X POST "${{ secrets.BUILD_WEBHOOK }}" # CloudFlare Page Build
 
