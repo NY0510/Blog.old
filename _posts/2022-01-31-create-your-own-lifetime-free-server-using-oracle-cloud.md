@@ -38,6 +38,7 @@ VM 개수는 **오라클 클라우드**에선 2개까지 무료이고, **구글 
 | Cloud UI 사용성 | Web UI                        | **_Web UI (오라클에 비해 직관적)_** |
 
 <br>
+
 ## Oracle Cloud 평생 무료 VPS 만들기
 
 [Oracle Cloud 홈페이지](https://www.oracle.com/kr/cloud/free/)에 게시된 무료 조건은 아래와 같습니다.
@@ -47,6 +48,7 @@ VM 개수는 **오라클 클라우드**에선 2개까지 무료이고, **구글 
 ![상시 무료 클라우드]({{ site.url }}/assets/images/2022-01-31-create-your-own-lifetime-free-server-using-oracle-cloud/oracle-cloud-main-img.png)
 
 <br>
+
 ### Oracle Cloud 계정 생성
 
 먼저 [여기](https://signup.cloud.oracle.com/)에서 계정을 만들어줘야 합니다.
@@ -60,6 +62,7 @@ VM 개수는 **오라클 클라우드**에선 2개까지 무료이고, **구글 
 > 저는 서울은 사용자가 너무 많을 거 같아 **대한민국/춘천**으로 선택했습니다.
 
 <br>
+
 ### VM Instance 생성
 
 회원가입을 완료한 뒤, [Oracle Cloud](https://cloud.oracle.com/)에 접속해 **VM 인스턴스 생성**을 클릭합니다.
@@ -76,6 +79,7 @@ VM 개수는 **오라클 클라우드**에선 2개까지 무료이고, **구글 
 ![VM Instance 생성]({{ site.url }}/assets/images/2022-01-31-create-your-own-lifetime-free-server-using-oracle-cloud/make-vm-2.jpg)
 
 <br>
+
 ## 생성 확인 및 SSH 접속
 
 VM 생성이 완료되었다면 [여기](https://cloud.oracle.com/compute/instances)에서 VM 정보를 확인할 수 있습니다.

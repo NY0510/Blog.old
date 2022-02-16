@@ -1,8 +1,7 @@
-_site
-.sass-cache
-Gemfile.lock
-_drafts
-.jsbeautifyrc
+_site/
+.sass-cache/
 .jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
 *.cmd
 플러그인.md
