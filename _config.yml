@@ -3,7 +3,7 @@
 # # # # # # # # # # # # #
 
 # Basic
-name: "NY0510의 무한삽질 블로그"
+name: "NY64의 무한삽질 블로그"
 description: "많은 것을 시도하고 끊임없이 노력하는 학생, 김가온 입니다!"
 
 author:
@@ -26,7 +26,7 @@ author:
 
 copyright:
     year: 2021
-    name: NY0510
+    name: NY64
 
 # Google-analytics
 google-analytics:
