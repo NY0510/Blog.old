@@ -10,7 +10,7 @@ author:
     youtubeChannel: UCbPHBnYHcUYcWfpIEtn60WA
     discord: "690148325604720660"
     github: NY0510
-    email: namnyang0510@gmail.com
+    email: me@ny64.kr
     facebook:
     youtubeUser:
     twitter:
@@ -33,7 +33,7 @@ google-analytics:
     id: "G-S51V5E7PLR"
 
 # URL
-url: "https://blog.namnyang.live" # the base hostname & protocol for your site
+url: "https://blog.ny64.kr" # the base hostname & protocol for your site
 # url:                "http://localhost:4000" # use this url when you develop
 baseurl: "" # the subpath of your site, e.g. /blog
 

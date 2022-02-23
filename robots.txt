@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog.namnyang.live/sitemap.xml
+Sitemap: https://blog.ny64.kr/sitemap.xml
